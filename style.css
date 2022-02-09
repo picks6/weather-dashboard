@@ -82,10 +82,8 @@
 /* TO STYLE THE MAIN WEATHER BOX */
 .current-weather {
     padding: 10px;
-    margin: 10px;
     background: silver;
-    border-radius: 7px;
-    line-height: 12px;
+
 }
 
 .cityDiv {
@@ -99,27 +97,12 @@
     border-radius: 5px;
 }
 
-.current-weather p {
-    font-family: monospace;
-    font-weight: 900;
-}
-
-.current-weather span {
-    font-family: monospace;
-    font-weight: 900;
-}
 
 /* 5 day weather box */
 .five-day {
     display: flex;
     justify-content: space-around;
     background-color: silver;
-    border-radius: 7px;
-}
-
-.five-day p {
-    font-family: monospace;
-    font-weight: 900;
 }
 
 .card {
