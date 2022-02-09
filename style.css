@@ -115,3 +115,8 @@
     padding: 10px;
     line-height: 12px;
 }
+
+.card img{
+    height:30px;
+    width: 33%;
+}
