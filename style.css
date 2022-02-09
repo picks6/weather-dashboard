@@ -79,6 +79,11 @@
     padding-right: 5%;
 }
 
+.weather-display img{
+    max-height: 50px;
+    width: 10%
+}
+
 /* TO STYLE THE MAIN WEATHER BOX */
 .current-weather {
     padding: 10px;
@@ -96,6 +101,7 @@
     padding: 5px;
     border-radius: 5px;
 }
+
 
 
 /* 5 day weather box */

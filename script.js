@@ -12,6 +12,26 @@ var date = moment().format("dddd, MMM Do");
 var dateEl = document.getElementById("current-date")    
 dateEl.textContent = date
 
+// Creating the button for past searches
+function addButton(city, state, lat, lon) {
+  var a = $("<button>" + city + "</button>");
+  a.attr("data-lat", lat).attr("data-lon", lon).attr("data-state", state);
+  a.addClass("cityBtn");
+  $(".past-searches").append(a);
+}
+
+// allows former searches to be searched again
+function pastSearch(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  var lat = $(this).data().lat;
+  var lon = $(this).data().lon;
+  var state = $(this).data().state;
+  var city = $(this).text();
+
+  findWeather(city, state, lat, lon);
+}
+
 
 // local storage is called which will add buttons for previous searches
 function loadPrevious() {
@@ -74,26 +94,6 @@ function createUrl(event) {
         findWeather(city, state, lat, lon);
       });
   }
-}
-
-// Creating the button for past searches
-function addButton(city, state, lat, lon) {
-  var a = $("<button>" + city + "</button>");
-  a.attr("data-lat", lat).attr("data-lon", lon).attr("data-state", state);
-  a.addClass("cityBtn");
-  $(".past-searches").append(a);
-}
-
-// allows former searches to be searched again
-function pastSearch(event) {
-  event.preventDefault();
-  event.stopPropagation();
-  var lat = $(this).data().lat;
-  var lon = $(this).data().lon;
-  var state = $(this).data().state;
-  var city = $(this).text();
-
-  findWeather(city, state, lat, lon);
 }
 
 // create fetchURL
